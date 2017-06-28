@@ -5,3 +5,36 @@
 	background: #8DA7E2;
 	margin-top: 10px;
 }
+
+
+.countdown-circle .countdown-text {
+    margin-left: auto !important;
+    font-size: 38px !important;
+}
+
+.countdown-label {
+	display: inline;
+	padding: 0;
+	line-height: 100px;
+	height: 100px;
+}
+
+.countdown-label p {
+	transform: translateY(+100%);
+	font-weight: 400 !important;
+	/*color: white !important;*/
+}
+
+.countdown-container {
+	display: inline;
+}
+
+.v-centred {
+	text-align: center;
+    position: relative;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
