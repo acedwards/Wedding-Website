@@ -74,53 +74,56 @@
             <div class="header-content-inner">
                 <h1 id="homeHeading">Andrea and Marcus</h1>
                 <p>We're getting married!</p>
-                <div class="col-md-3">
+                <div id="countdown-display" class="col-md-3 col-sm-5 no-gutter">
                     <div class="row">
-                        <div class="col-md-5 no-padding">
-                            <div class="countdown-circle" id="dayCircle">
-                                <p class="countdown-text v-centred">300</p>
+                        <div class="col-md-5 col-sm-5 col-xs-5 no-padding">
+                            <div class="countdown-circle">
+                                <p id="dayCircle" class="countdown-text v-centred"></p>
                             </div>
                         </div>
-                        <div class="col-md-5 no-padding">
+                        <div class="col-md-5 col-sm-5 col-xs-5 no-padding">
                             <div class="countdown-label"><p>Days</p></div>
                         </div>
                     </div>
                         
                     <div class="row">
-                        <div class="col-md-5 no-padding">
-                            <div class="countdown-circle" id="hourCircle">
-                                <p class="countdown-text v-centred">50</p>
+                        <div class="col-md-5 col-sm-5 col-xs-5 no-padding">
+                            <div class="countdown-circle">
+                                <p id="hourCircle" class="countdown-text v-centred"></p>
                             </div>
                         </div>
-                        <div class="col-md-5 no-padding">
+                        <div class="col-md-5 col-sm-5 col-xs-5 no-padding">
                             <div class="countdown-label"><p>Hours</p></div>
                         </div>
                     </div>
                         
                     <div class="row">
-                        <div class="col-md-5 no-padding">
-                            <div class="countdown-circle" id="minCircle">
-                                <p class="countdown-text v-centred">5</p>
+                        <div class="col-md-5 col-sm-5 col-xs-5 no-padding">
+                            <div class="countdown-circle">
+                                <p id="minCircle" class="countdown-text v-centred"></p>
                             </div>
                         </div>
-                        <div class="col-md-5 no-padding">
+                        <div class="col-md-5 col-sm-5 col-xs-5 no-padding">
                             <div class="countdown-label"><p>Minutes</p></div>
                         </div>
                     </div>
                         
                     <div class="row">
-                        <div class="col-md-5 no-padding">
-                            <div class="countdown-circle" id="secCircle">
-                                <p class="countdown-text v-centred">34</p>
+                        <div class="col-md-5 col-sm-5 col-xs-5 no-padding">
+                            <div class="countdown-circle">
+                                <p id="secCircle" class="countdown-text v-centred"></p>
                             </div>
                         </div>
-                        <div class="col-md-5 no-padding">
+                        <div class="col-md-5 col-sm-5 col-xs-5 no-padding">
                             <div class="countdown-label"><p>Seconds</p></div>
                         </div>
                     </div>
 
                 </div>
-                <div class="col-md-2"><p>hello</p></div>
+                <div class="col-md-4 col-sm-4 no-padding no-gutter center-text">
+                    <p class="centered-paragraph">We look forward to celebrating our special day with you!</p>
+                    <button id="rsvp-button" class="btn btn-primary btn-xl btn-large-text">RSVP</button>
+                </div>
             </div>
         </div>
     </header>
@@ -321,6 +324,8 @@
     <!-- Theme JavaScript -->
     <script src="js/creative.min.js"></script>
 
+    <!-- Custom Javascript -->
+    <script src="js/countdown.js"></script>
 </body>
 
 </html>

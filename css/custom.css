@@ -38,3 +38,16 @@
     transform: translateY(-50%);
 }
 
+.center-text {
+	text-align: center;
+}
+
+.btn-large-text {
+	font-size: 28px;
+}
+
+.centered-paragraph {
+	margin-left: auto !important;
+	margin-right: auto !important;
+}
+
