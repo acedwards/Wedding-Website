@@ -1,5 +1,5 @@
 
-var countDownDate = new Date("April 28, 2018 00:00:00").getTime();
+var countDownDate = new Date("April 28, 2018 13:30:00").getTime();
 
 function initialTime() {
 
