@@ -52,16 +52,16 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a class="page-scroll" href="#rsvp">RSVP</a>
+                        <a class="page-scroll" href="#welcome">RSVP</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#our-story">Our Story</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#big-event">When/Where</a>
+                        <a class="page-scroll" href="#big-event">The Event</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#contact">Contact</a>
+                        <a class="page-scroll" href="#registry">Registry</a>
                     </li>
                 </ul>
             </div>
@@ -78,7 +78,7 @@
         </div>
     </header>
 
-    <section class="bg-primary" id="rsvp">
+    <section class="bg-primary" id="welcome">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-2"></div>
@@ -112,7 +112,7 @@
                 <div class="col-lg-8 col-lg-offset-2 text-center">
                     <hr class="light">
                     <p id="rsvp-blurb" class="centered-paragraph large-text">We look forward to celebrating our special day with you!</p>
-                    <button class="btn btn-default btn-xl sr-button large-text">RSVP</button>
+                    <button id="rsvp" class="btn btn-default btn-xl sr-button large-text" data-toggle="modal" data-target="#rsvpModal">RSVP</button>
                 </div>
             </div>
         </div>
@@ -147,9 +147,9 @@
     <section id="big-event" class="bg-primary">
         <div class="container text-center">
             <div class="col-lg-6">
-                <h1 class="section-heading">When/Where</h1>
+                <h1 class="section-heading">The Event</h1>
                 <hr class="light">
-                <p>Both the ceremony and reception will be held at Creekside Church, which is located at <strong>660 Conservation Dr, Waterloo, ON</strong>.</p>
+                <p>Both the ceremony and reception will be held at Creekside Church, which is located at <strong>660 Conservation Dr, Waterloo, ON</strong>. There is plenty of parking at the church. We ask that the dress code be semi-formal and up!</p>
                 <div class="row">
                         <h2>1:30 pm</h2>
                         <p>The ceremony begins in the West Side auditorium</p>
@@ -165,15 +165,53 @@
         </div>
     </section>
 
+    <section id="registry">
+        <div class="container text-center">
+            <h1 class="section-heading">Registry</h1>
+            <hr class="primary">
+            <p>We are currently registered at the following store:</p>
+        </div>
+    </section>
+
     <aside class="bg-dark">
         <div class="container text-center">
             <div class="call-to-action">
                 <h2>We can't wait to celebrate with you!</h2>
-                <button class="btn btn-default btn-xl sr-button">RSVP</button>
+                <button id="rsvp" class="btn btn-default btn-xl sr-button" data-toggle="modal" data-target="#rsvpModal">RSVP</button>
             </div>
         </div>
     </aside>
 
+    <div class="modal fade" id="rsvpModal" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header no-border">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h2 class="modal-title text-center">RSVP</h2> 
+            <hr class="primary">          
+          </div>
+          <div class="modal-body">
+              <div class="container-fluid">
+                <p class="text-center">Please enter the name on your invitation:</p>
+                <form class="form-inline text-center">
+                  <div class="form-group">
+                    <label for="firstName" class="sr-only">First Name</label>
+                    <input type="text" class="form-control" id="firstName" placeholder="First Name">
+                  </div>
+                  <div class="form-group">
+                    <label for="lastName" class="sr-only">Last Name</label>
+                    <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+                  </div>
+                </form>    
+              </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="submit" class="btn btn-primary">Next</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- jQuery -->
     <script src="vendor/jquery/jquery.min.js"></script>
