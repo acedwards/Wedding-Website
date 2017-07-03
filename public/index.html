@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Andrea and Marcus</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Montserrat" rel="stylesheet" type="text/css">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+
+    <!-- Plugin CSS -->
+    <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+
+    <!-- Theme CSS -->
+    <link href="public/css/creative.css" rel="stylesheet">
+    <link href="public/css/custom.css" rel="stylesheet">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/4.1.3/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/4.1.3/firebase-auth.js"></script>
+    <script defer src="/__/firebase/4.1.3/firebase-database.js"></script>
+    <script defer src="/__/firebase/4.1.3/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/4.1.3/firebase-storage.js"></script>
+    <!-- initialize the SDK after all desired features are loaded -->
+    <script defer src="/__/firebase/init.js"></script>
+
+  </head>
+  <body id="page-top">
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+          <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand page-scroll" href="#page-top"><i class="fa fa-heart text-primary sr-icons"></i></a>
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a class="page-scroll" href="#welcome">RSVP</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#our-story">Our Story</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#big-event">The Event</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#registry">Registry</a>
+          </li>
+        </ul>
+      </div>
+      <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+  </nav>
+
+  <header>
+    <div class="header-content">
+      <div class="header-content-inner">
+        <h1 id="homeHeading">Andrea and Marcus</h1>
+        <p>April 28, 2018</p>
+      </div>
+  </header>
+
+  <section class="bg-primary" id="welcome">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-md-2"></div>
+        <div class="col-md-2 no-gutter">
+          <div class="countdown-circle">
+            <p id="dayCircle" class="countdown-text v-centred"></p>
+          </div>
+          <h2 class="countdown-label">Days</h2>
+        </div>
+        <div class="col-md-2 no-gutter">
+          <div class="countdown-circle">
+            <p id="hourCircle" class="countdown-text v-centred"></p>
+          </div>
+          <h2 class="countdown-label">Hours</h2>
+        </div>
+        <div class="col-md-2 no-gutter">
+          <div class="countdown-circle">
+            <p id="minCircle" class="countdown-text v-centred"></p>
+          </div>
+          <h2 class="countdown-label centered-paragraph">Minutes</h2>
+        </div>
+        <div class="col-md-2 no-gutter">
+          <div class="countdown-circle">
+            <p id="secCircle" class="countdown-text v-centred"></p>
+          </div>
+          <h2 class="countdown-label centered-paragraph">Seconds</h2>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 text-center">
+          <hr class="light">
+          <p id="rsvp-blurb" class="centered-paragraph large-text">We look forward to celebrating our special day with you!</p>
+          <button id="rsvp" class="btn btn-default btn-xl sr-button large-text" data-toggle="modal" data-target="#rsvpModal">RSVP</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="our-story" class="no-v-padding">
+    <div class="container no-left-gap">
+      <div class="col-lg-5 col-md-6 no-gutter no-padding">
+        <img class="img-responsive hidden-md hidden-lg hidden-xl" src="img/our-story.jpg" />
+        <img class="img-responsive screen-height hidden-sm hidden-xs" src="img/our-story.jpg" />
+      </div>
+
+      <div class="col-lg-7 col-md-6 text-center">
+
+        <h1 class="section-heading">Our Story</h1>
+        <hr class="primary">
+        <div class="text-left">
+          <p>
+            When Marcus arrived at Laurentian Hills Christian School in grade 7, he stood out to Andrea because he was the new kid. To Marcus, though, Andrea was just another face in the crowd.  Neither of them could guess where they both would be nearly 9 years later.  In high school, after catching each other's eyes at a badminton tournament hosted by the Waterloo Christian Reformed Church, they struck up a conversation on Facebook based on a mutual interest in Doctor Who.  A few months later, Andrea invited Marcus to her 17th birthday party at the Plattsville Arena, where Marcus had to try to put his best foot forward in his Great Uncle Gustav's 50 year old skates.  They decided to keep seeing each other though, so that must not have gone <i>too</i> badly.
+          </p>
+          <p>
+            Two proms, and two high school graduation ceremonies later, Marcus and Andrea both made it to university.  Marcus was off to Wilfrid Laurier University for Computing and Computer Electronics and Andrea to the University of Waterloo in Systems Design Engineering.  Though school was (and still is) hectic, they were able to enjoy many lunches and study sessions together, their campuses only separated by a short walk.  During co-op terms in Toronto, Andrea would take the train home every weekend so they could spend more time together.
+          </p>
+          <p id="last-p">
+            On January 2, 2017, 3 years after the skating party, Marcus took Andrea out for dinner and then skating at an arena he had rented just for the two of them.  About halfway through their skate, Marcus knelt down and proposed on the ice!  They were congratulated by the zamboni driver on their way out. Both of them are very excited to continue their lives together and to pledge their commitment to each other on their wedding day, April 28, 2018.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="big-event" class="bg-primary">
+    <div class="container text-center">
+      <div class="col-lg-6">
+        <h1 class="section-heading">The Event</h1>
+        <hr class="light">
+        <p>Both the ceremony and reception will be held at Creekside Church, which is located at <strong>660 Conservation Dr, Waterloo, ON</strong>. There is plenty of parking at the church. We ask that the dress code be semi-formal and up!</p>
+        <div class="row">
+          <h2>12:30 pm</h2>
+          <p>The ceremony begins in the West Side auditorium</p>
+        </div>
+        <div class="row">
+          <h2>1:00 - 3:00 pm</h2>
+          <p>Join us in the atrium for a late buffet lunch and speeches!</p>
+        </div>
+      </div>
+      <div class="col-lg-6">
+        <div id="map"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="registry">
+    <div class="container text-center">
+      <h1 class="section-heading">Registry</h1>
+      <hr class="primary">
+      <p>We are currently registered at the following store:</p>
+    </div>
+  </section>
+
+  <aside class="bg-dark">
+    <div class="container text-center">
+      <div class="call-to-action">
+        <h2>We can't wait to celebrate with you!</h2>
+        <button id="rsvp" class="btn btn-default btn-xl sr-button" data-toggle="modal" data-target="#rsvpModal">RSVP</button>
+      </div>
+    </div>
+  </aside>
+
+  <div class="modal fade" id="rsvpModal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header no-border">
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+          <h2 class="modal-title text-center">RSVP</h2>
+          <hr class="primary">
+        </div>
+        <div class="modal-body">
+          <div class="container-fluid">
+            <p class="text-center">Please enter the name on your invitation:</p>
+            <form class="form-inline text-center">
+              <div class="form-group">
+                <label for="firstName" class="sr-only">First Name</label>
+                <input type="text" class="form-control" id="firstName" placeholder="First Name">
+              </div>
+              <div class="form-group">
+                <label for="lastName" class="sr-only">Last Name</label>
+                <input type="text" class="form-control" id="lastName" placeholder="Last Name">
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+          <button type="submit" class="btn btn-primary">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- Firebase -->
+  <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyBar-sCeqHPOfJJd7UNon8TRLFKzv1oig4",
+      authDomain: "wedding-website-abf8a.firebaseapp.com",
+      databaseURL: "https://wedding-website-abf8a.firebaseio.com",
+      projectId: "wedding-website-abf8a",
+      storageBucket: "wedding-website-abf8a.appspot.com",
+      messagingSenderId: "999804568918"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase-app.js"></script>
+  <!-- <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase-auth.js"></script> -->
+  <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase-database.js"></script>
+
+  <script src="form-control.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+  <script src="vendor/scrollreveal/scrollreveal.min.js"></script>
+  <script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+
+  <!-- Theme JavaScript -->
+  <script src="js/creative.min.js"></script>
+
+  <!-- Custom Javascript -->
+  <script src="js/countdown.js"></script>
+
+  <!-- Google Maps -->
+  <script async defer
+          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMD6dYn-FjZ6NHwyH7qGttKI9XC7JAa54&callback=initMap">
+  </script>
+  <script src="js/map.js"></script>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        // // The Firebase SDK is initialized and available here!
+        //
+        // firebase.auth().onAuthStateChanged(user => { });
+        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+        // firebase.messaging().requestPermission().then(() => { });
+        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+        //
+        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+        try {
+          let app = firebase.app();
+          let features = ['auth', 'database', 'messaging', 'storage'].filter(feature => typeof app[feature] === 'function');
+          document.getElementById('load').innerHTML = `Firebase SDK loaded with ${features.join(', ')}`;
+        } catch (e) {
+          console.error(e);
+          document.getElementById('load').innerHTML = 'Error loading the Firebase SDK, check the console.';
+        }
+      });
+    </script>
+  </body>
+</html>
