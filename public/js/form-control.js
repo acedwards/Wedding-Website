@@ -3,9 +3,9 @@ function validate(firstName, lastName) {
 	
 }
 
-$(#rsvpForm).on('submit', function(e) {
-	var firstName = $(#firstName);
-	var lastName = $(#lastName);
+$('#rsvpForm').on('submit', function(e) {
+	var firstName = $('#firstName');
+	var lastName = $('#lastName');
 
 	var isValid = validate(firstName, lastName);
 
@@ -17,4 +17,4 @@ $(#rsvpForm).on('submit', function(e) {
 		e.preventDefault();
 	}
 
-})
+});
