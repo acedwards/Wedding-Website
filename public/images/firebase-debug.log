@@ -1,0 +1,28 @@
+[debug] [2017-07-08T01:09:39.044Z] ----------------------------------------------------------------------
+[debug] [2017-07-08T01:09:39.047Z] Command:      /usr/local/bin/node /usr/local/bin/firebase serve
+[debug] [2017-07-08T01:09:39.048Z] CLI Version:  3.9.1
+[debug] [2017-07-08T01:09:39.048Z] Platform:     darwin
+[debug] [2017-07-08T01:09:39.048Z] Node Version: v6.10.2
+[debug] [2017-07-08T01:09:39.049Z] Time:         Fri Jul 07 2017 21:09:39 GMT-0400 (EDT)
+[debug] [2017-07-08T01:09:39.049Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2017-07-08T01:09:39.063Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2017-07-08T01:09:39.064Z] > authorizing via signed-in user
+[debug] [2017-07-08T01:09:39.066Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/wedding-website-abf8a  
+ Fri Jul 07 2017 21:09:39 GMT-0400 (EDT)
+[debug] [2017-07-08T01:09:39.736Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-08T01:09:39.738Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/wedding-website-abf8a/tokens  
+ Fri Jul 07 2017 21:09:39 GMT-0400 (EDT)
+[debug] [2017-07-08T01:09:40.040Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/marcusedwards/Documents/Wedding/Wedding-Website'...
+[info] 
+[debug] [2017-07-08T01:09:40.046Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/wedding-website-abf8a  
+ Fri Jul 07 2017 21:09:40 GMT-0400 (EDT)
+[debug] [2017-07-08T01:09:40.403Z] <<< HTTP RESPONSE 200
+[debug] [2017-07-08T01:09:40.404Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/999804568918/clients/_:getWebAppConfig  
+ Fri Jul 07 2017 21:09:40 GMT-0400 (EDT)
+[debug] [2017-07-08T01:09:40.707Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+
