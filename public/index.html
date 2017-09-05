@@ -170,7 +170,7 @@
       <div class="col-lg-6">
         <h1 class="section-heading">The Event</h1>
         <hr class="light">
-        <p>Both the ceremony and reception will be held at Creekside Church, which is located at <strong>660 Conservation Dr, Waterloo, ON</strong>. There is plenty of parking at the church. We ask that the dress code be semi-formal and up!</p>
+        <p>Both the ceremony and reception will be held at Creekside Church, which is located at <strong>660 Conservation Dr, Waterloo, ON</strong>. There is plenty of parking at the church. We ask that the dress code be semi-formal!</p>
         <div class="row">
           <h2>12:30 pm</h2>
           <p>The ceremony begins in the West Side auditorium</p>
@@ -190,7 +190,7 @@
     <div class="container text-center">
       <h1 class="section-heading">Registry</h1>
       <hr class="primary">
-      <p>We are currently registered at the following store:</p>
+      <p>We are currently registered at the following establishment:</p>
       <h2>NO WHERE</h2>
     </div>
   </section>
@@ -199,7 +199,6 @@
     <div class="container text-center">
       <h1 class="section-heading">Photo Gallery</h1>
       <hr class="light">
-      <p>Our engagement photo shoot!</p>
     </div>
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2 col-md-8 col-md-offset-2 col-sm-8 col-sm-offset-2 col-xs-8 col-xs-offset-2">
@@ -226,7 +225,7 @@
     </div>
   </aside>
 
-  <div class="modal fade" id="rsvpModal" tabindex="-1" role="dialog">
+  <div class="modal fade multi-step" id="rsvpModal" tabindex="-1" role="dialog">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header no-border">
@@ -234,8 +233,8 @@
           <h2 class="modal-title text-center">RSVP</h2>
           <hr class="primary">
         </div>
-     
-          <div class="modal-body">
+          
+          <div class="modal-body step step-1">
             <div class="container-fluid text-center">
               <p class="text-center">Please enter the name on your invitation:</p>
                 <div class="form-group rsvp-form">
@@ -243,16 +242,47 @@
                   <input type="text" class="form-control" id="firstName" placeholder="First Name">
                   <label for="lastName" class="sr-only">Last Name</label>
                   <input type="text" class="form-control" id="lastName" placeholder="Last Name">
-                  <div id="rsvp-error-message-1" class="form-control-feedback">hello</div>
+                  <div id="rsvp-error-message-1" class="form-control-feedback"></div>
                 </div>
-              
             </div>
           </div>
+
+          <div class="modal-body step step-2">
+            <div class="container-fluid text-center">
+              <h2 class="name-header"><span id="firstNameHeader"></span> <span id="lastNameHeader"></span></h2>
+                <div class="response-options">
+                  <div class="form-check form-check-inline" id="responseBtns">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> Will attend
+                    </label>
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <label class="form-check-label">
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="0"> Will not attend
+                    </label>
+                  </div>
+                </div>
+                <hr class="primary short">
+                <div class="form-group">
+                  <label for="dietaryRestrictions">Are there any dietary restrictions you'd like us to know about?</label>
+                  <textarea class="form-control" id="dietaryRestrictions" rows="2"></textarea>
+                </div>
+
+                <button id="addGuest" type="button" class="btn btn-primary" style="display: none">Add Guest</button>
+            </div>
+          </div>
+
+          <div class="modal-body step step-3">
+            <div class="container-fluid text-center">
+              <p>We've received your response. Thank you!</p>
+            </div>
+          </div>
+
           <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-            <button id="next" type="button" class="btn btn-primary">Next</button>
+            <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="checkNames()">Next</button>
+            <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="updateDatabase()">Submit</button>
           </div>
-      
       </div>
     </div>
   </div>
@@ -281,7 +311,7 @@
   <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase-auth.js"></script> 
   <script src="https://www.gstatic.com/firebasejs/4.1.3/firebase-database.js"></script>
 
-  <script src="js/form-control.js"></script>
+  
 
   <!-- Plugin JavaScript -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
@@ -326,5 +356,7 @@
             }
     );
   </script>
+  <script src="/js/multi-step-modal.js"></script>
+  <script src="js/form-control.js"></script>
   </body>
 </html>

@@ -100,8 +100,30 @@
 	margin-left: auto;
 	margin-right: auto;
 	position: initial;
+	line-height: 1.4;
 	width: 100%;
 	display: none;
+}
+
+.modal-footer {
+	margin-top: 50px;
+}
+
+.response-options {
+	margin-bottom: 15px;
+}
+
+.name-header {
+	margin-top: -15px;
+    margin-bottom: 15px;
+}
+
+#rsvpModal2 .modal-body {
+	padding-top: 0;
+}
+
+hr .short {
+	max-width: 15px;
 }
 
 #map {
