@@ -74,6 +74,9 @@
           <li>
             <a class="page-scroll" href="#registry">Registry</a>
           </li>
+          <li>
+            <a class="page-scroll" href="#gallery">Photo Gallery</a>
+          </li>
         </ul>
       </div>
       <!-- /.navbar-collapse -->
@@ -251,7 +254,7 @@
             <div class="container-fluid text-center">
               <h2 class="name-header"><span id="firstNameHeader"></span> <span id="lastNameHeader"></span></h2>
                 <div class="response-options">
-                  <div class="form-check form-check-inline" id="responseBtns">
+                  <div class="form-check form-check-inline">
                     <label class="form-check-label">
                       <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> Will attend
                     </label>
@@ -279,9 +282,10 @@
           </div>
 
           <div class="modal-footer">
-            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
             <button type="button" class="btn btn-primary step step-1" data-step="1" onclick="checkNames()">Next</button>
-            <button type="button" class="btn btn-primary step step-2" data-step="2" onclick="updateDatabase()">Submit</button>
+            <button id="submit" type="button" class="btn btn-primary step step-2" data-step="2" onclick="updateDatabase()" disabled=true>Submit</button>
+            <button type="button" class="btn btn-primary step step-3" data-step="3" onclick="startOver()">Respond for another guest</button>
           </div>
       </div>
     </div>
