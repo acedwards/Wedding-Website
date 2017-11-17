@@ -21,6 +21,10 @@
 	display: inline;
 }
 
+.p-centerer{
+	margin-right: 10%;
+}
+
 .v-centred {
 	text-align: center;
     position: relative;
