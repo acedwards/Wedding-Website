@@ -69,12 +69,12 @@ startOver = function(){
 	$('#firstName').val('');
 	$('#lastName').val('');
 	$('#dietaryRestrictions').val('');
-}
-
-$('#rsvpModal').on('hidden.bs.modal', function(e){
 	$('.form-group').removeClass('has-error');
 	$('.form-group').removeClass('has-warning');
 	$('#rsvp-error-message-1').hide();
+}
+
+$('#rsvpModal').on('hidden.bs.modal', function(e){	
 	startOver();
 })
 
