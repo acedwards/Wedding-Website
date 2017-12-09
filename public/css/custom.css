@@ -140,3 +140,11 @@ hr .short {
 #last-p {
 	margin-bottom: 30px;
 }
+
+.link-img{
+	height: 142px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+}
