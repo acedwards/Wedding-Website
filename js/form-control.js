@@ -10,11 +10,14 @@ function getGuest(firstName, lastName, Callback) {
 	});
 }
 
-function setResponse(response, dietInfo) {
+function setResponse(response, dietInfo, plusOne) {
 	var updates = {}
 	updates['/guests/' + guestName + '/isComing'] = parseInt(response);
 	if (dietInfo.length > 0) {
 		updates['/guests/' + guestName + '/dietary'] = dietInfo;
+	}
+	if (plusOne !== undefined) {
+		updates['/guests/' + guestName + '/plusOne'] = parseInt(plusOne);
 	}
 	return firebase.database().ref().update(updates);
 }
@@ -45,7 +48,7 @@ checkNames = function(e) {
 				//if has not rsvped-> continue to next Modal
 				else {
 					if (guestInfo.plusOne === 1) {
-						$('#addGuest').show();
+						$('#plusOneCheck').show();
 					}
 					$('#firstNameHeader').html(firstName);
 					$('#lastNameHeader').html(lastName);
@@ -59,7 +62,8 @@ checkNames = function(e) {
 updateDatabase = function(){
 	var response = $('.response-options input:radio:checked').val();
 	var dietInfo = $('#dietaryRestrictions').val();
-	setResponse(response, dietInfo).then(function(){
+	var plusOne = $('#plusOne:checked').val();
+	setResponse(response, dietInfo, plusOne).then(function(){
 		$('#rsvpModal').trigger('next.m.3');
 	});
 }
